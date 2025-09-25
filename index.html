@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>我的个人网站</title>
-    <meta name="description" content="计算机专业学生的技术博客">
+    <meta charset="UTF-8">
+    <title>欢迎来到我的 GitHub Pages!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #222;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5em;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #ff758c, #ff7eb3, #65eebf, #66a6ff);
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+        p {
+            font-size: 1.3rem;
+            margin-bottom: 2em;
+        }
+        .fun-btn {
+            padding: 1em 2em;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #ff758c, #65eebf);
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(100, 200, 255, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fun-btn:hover {
+            transform: scale(1.08) rotate(-2deg);
+            box-shadow: 0 8px 32px rgba(100, 200, 255, 0.3);
+            background: linear-gradient(90deg, #65eebf, #ff758c);
+        }
+        .emoji {
+            font-size: 2.5rem;
+            margin-bottom: 1em;
+            animation: bounce 1.2s infinite alternate;
+            display: inline-block;
+        }
+        @keyframes bounce {
+            to {
+                transform: translateY(-15px) scale(1.1);
+            }
+        }
+        footer {
+            margin-top: 3em;
+            color: #666;
+            font-size: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Pepper Source</h1>
-    <p>这里将分享数据库、C++编程和花椒专栏等内容</p>
+    <div class="emoji">🚀✨</div>
+    <h1>欢迎来到我的 GitHub Pages!</h1>
+    <p>这是一个有趣又美观的主页。你可以在这里展示你的项目、分享你的故事，或者随便写点什么！</p>
+    <button class="fun-btn" onclick="showSurprise()">点我有惊喜！</button>
+    <footer>
+        &copy; 2025 by <a href="https://github.com/EthanBrooks-sheng" style="color:#66a6ff;text-decoration:none;">你的GitHub</a>
+    </footer>
+    <script>
+        function showSurprise() {
+            const emojis = ["🎉", "😎", "🌈", "🦄", "💡", "🔥", "🍀", "🥳"];
+            const msg = [
+                "祝你每天开心！",
+                "代码顺利，bug 退散！",
+                "Keep Coding!",
+                "GitHub 万岁！",
+                "你很棒！",
+                "继续加油！"
+            ];
+            const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+            const text = msg[Math.floor(Math.random() * msg.length)];
+            alert(emoji + " " + text);
+        }
+    </script>
 </body>
 </html>
